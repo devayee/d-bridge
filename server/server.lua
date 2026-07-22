@@ -351,7 +351,7 @@ end)
 -- ================= VERSION CHECK =================
 
 CreateThread(function()
-    if not Config.CheckVersion or Config.GithubRepo == 'your-name-here/bridge' then return end
+    if not Config.CheckVersion or Config.GithubRepo == 'devayee/d-bridge' then return end
     Wait(2000)
 
     PerformHttpRequest(('https://api.github.com/repos/%s/releases/latest'):format(Config.GithubRepo), function(statusCode, response)
