@@ -98,14 +98,3 @@ end, 'bank')
 - **`GetOwnedVehicles`** / **`IsVehicleOwned`** require `oxmysql` and assume default `owned_vehicles` / `player_vehicles` table schemas. Adjust `Config.VehicleTable` if yours differ.
 - **`IsDead`** currently only reads QBCore's metadata flag — ESX has no native death state, so track it in your own ambulance-job resource and extend this function if you need it there.
 
-## Configuration
-
-Edit `shared/config.lua` to force a specific framework/inventory instead of auto-detecting:
-
-```lua
-Config.Framework = 'qbcore' -- instead of 'auto'
-Config.Inventory = 'ox_inventory'
-```
-
-Set `Config.GithubRepo = 'yourname/bridge'` and keep `Config.CheckVersion = true` to get a console warning when a newer GitHub release is available.
-
